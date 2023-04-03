@@ -24,6 +24,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
+          'postcss-loader', // 追加
           'sass-loader',
         ]
       }
