@@ -27,7 +27,21 @@ module.exports = {
           'postcss-loader', // 追加
           'sass-loader',
         ]
-      }
+      },
+      {
+        test: /\.(jpe?g|gif|png|svg|woff2?|tff|eot)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              // name: '[name].[ext]',
+              name: '[contenthash].[ext]',
+              outputPath: 'images',
+              publicPath: 'images',
+            },
+          },
+        ]
+      },
     ]
   },
 }
